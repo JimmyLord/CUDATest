@@ -1,0 +1,16 @@
+@echo off
+
+rem Uncomment the line below and set a custom path for premake5.exe
+rem set PREMAKE5_PATH=C:\Apps\Premake5
+
+
+IF NOT DEFINED PREMAKE5_PATH ( GOTO PathNotDefined )
+
+set PATH=%PATH%;%PREMAKE5_PATH%;
+GOTO Done
+
+:PathNotDefined
+echo "Tool paths are not defined - edit this file and add custom paths"
+pause
+
+:Done
