@@ -13,6 +13,13 @@ project "CUDATest"
 	files {
 		"CUDATest/Source/**.cpp",
 		"CUDATest/Source/**.h",
+		"CUDATest/Source/**.cu",
+		"CUDATest/Source/**.cuh",
+		".gitignore",
+		"GenerateProjectFiles.bat",
+		"SetupPaths.bat",
+		"premake5.lua",
+		"readme.txt",
 	}
 
 	includedirs {
