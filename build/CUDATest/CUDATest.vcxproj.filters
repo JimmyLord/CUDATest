@@ -11,37 +11,37 @@
       <UniqueIdentifier>{972EF12B-039B-AC26-CC8E-448438BACE8E}</UniqueIdentifier>
     </Filter>
     <Filter Include="CUDATest\Source\Utility">
-      <UniqueIdentifier>{f2d821df-39d8-4dbc-aeac-8789241f8964}</UniqueIdentifier>
+      <UniqueIdentifier>{45ED8E65-B124-D7FC-BA2E-3B2026E5FDF5}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\CUDATest\Source\Tasks\TaskAddValuesCPU.cpp">
-      <Filter>CUDATest\Source\Tasks</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\CUDATest\Source\WinMain.cpp">
-      <Filter>CUDATest\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\CUDATest\Source\Utility\Helpers.cpp">
-      <Filter>CUDATest\Source\Utility</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\.gitignore" />
-    <None Include="..\..\GenerateProjectFiles.bat" />
-    <None Include="..\..\SetupPaths.bat" />
-    <None Include="..\..\premake5.lua" />
-    <None Include="..\..\readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\CUDATest\Source\Tasks\TaskAddValuesCPU.h">
       <Filter>CUDATest\Source\Tasks</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\CUDATest\Source\Tasks\TaskAddValuesGPU.cuh">
-      <Filter>CUDATest\Source\Tasks</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\CUDATest\Source\Utility\Helpers.h">
       <Filter>CUDATest\Source\Utility</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\CUDATest\Source\Tasks\TaskAddValuesCPU.cpp">
+      <Filter>CUDATest\Source\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CUDATest\Source\Utility\Helpers.cpp">
+      <Filter>CUDATest\Source\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CUDATest\Source\WinMain.cpp">
+      <Filter>CUDATest\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\CUDATest\Source\Tasks\TaskAddValuesGPU.cuh">
+      <Filter>CUDATest\Source\Tasks</Filter>
+    </None>
+    <None Include="..\..\GenerateProjectFiles.bat" />
+    <None Include="..\..\SetupPaths.bat" />
+    <None Include="..\..\premake5.lua" />
+    <None Include="..\..\readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <CudaCompile Include="..\..\CUDATest\Source\Tasks\TaskAddValuesGPU.cu">

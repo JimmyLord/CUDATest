@@ -1,3 +1,3 @@
 #pragma once
 
-void TaskAddValuesCPU();
+double TaskAddValuesCPU(int numElements);

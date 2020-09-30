@@ -6,9 +6,10 @@ workspace "CUDATest"
 	startproject	"CUDATest"
 
 project "CUDATest"
-	kind		"WindowedApp"
-	location	"build/CUDATest"
-	debugdir	"CUDATest"
+	kind				"WindowedApp"
+	location			"build/CUDATest"
+	debugdir			"CUDATest"
+	buildcustomizations "BuildCustomizations/CUDA 11.0"
 
 	files {
 		"CUDATest/Source/**.cpp",

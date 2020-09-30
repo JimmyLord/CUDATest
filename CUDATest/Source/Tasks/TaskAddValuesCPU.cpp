@@ -1,22 +1,22 @@
 #include <Windows.h>
-#include <iostream>
-#include <math.h>
+#include <cmath>
 #include <assert.h>
 #include "Utility/Helpers.h"
 
 // Following tutorial on NVIDIA Blog:
 // https://developer.nvidia.com/blog/even-easier-introduction-cuda/
 
-void addNElements(int n, float* x, float* y)
+void addNElementsCPU(int n, float* x, float* y)
 {
-    for( int i=0; i<n; i++ )
+    for( int i = 0; i < n; i++ )
+    {
         y[i] = x[i] + y[i];
+    }
 }
 
-void TaskAddValuesCPU()
+double TaskAddValuesCPU(int numElements)
 {
-    int numElements = 1<<27; // 134 million elements.
-
+    // Allocate storage.
     float* x = new float[numElements];
     float* y = new float[numElements];
 
@@ -27,8 +27,13 @@ void TaskAddValuesCPU()
         y[i] = 2.0f;
     }
 
-    // Run kernel on 1M elements on the CPU.
-    addNElements( numElements, x, y );
+    double startTime = MyGetSystemTime();
+
+    // Run kernel on all elements on the CPU.
+    addNElementsCPU( numElements, x, y );
+
+    double endTime = MyGetSystemTime();
+    double runTime = endTime - startTime;
 
     // Check for errors (all values should be 3.0f).
     float maxError = 0.0f;
@@ -44,4 +49,6 @@ void TaskAddValuesCPU()
     // Free memory.
     delete[] x;
     delete[] y;
+
+    return runTime;
 }

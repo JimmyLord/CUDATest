@@ -1,3 +1,3 @@
 #pragma once
 
-void TaskAddValuesGPU();
+double TaskAddValuesGPU(int numElements, int method);

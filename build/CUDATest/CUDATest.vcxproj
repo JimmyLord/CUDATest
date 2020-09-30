@@ -64,9 +64,6 @@
     <Link>
       <SubSystem>Windows</SubSystem>
     </Link>
-    <CudaCompile>
-      <TargetMachinePlatform>64</TargetMachinePlatform>
-    </CudaCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -78,10 +75,11 @@
     <Link>
       <SubSystem>Windows</SubSystem>
     </Link>
-    <CudaCompile>
-      <TargetMachinePlatform>64</TargetMachinePlatform>
-    </CudaCompile>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\CUDATest\Source\Tasks\TaskAddValuesCPU.h" />
+    <ClInclude Include="..\..\CUDATest\Source\Utility\Helpers.h" />
+  </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\CUDATest\Source\Tasks\TaskAddValuesCPU.cpp" />
     <ClCompile Include="..\..\CUDATest\Source\Utility\Helpers.cpp" />
@@ -92,15 +90,11 @@
     <CudaCompile Include="..\..\CUDATest\Source\Tasks\TaskAddValuesGPU.cu">
       <FileType>Document</FileType>
     </CudaCompile>
+    <None Include="..\..\CUDATest\Source\Tasks\TaskAddValuesGPU.cuh" />
     <None Include="..\..\GenerateProjectFiles.bat" />
     <None Include="..\..\SetupPaths.bat" />
     <None Include="..\..\premake5.lua" />
     <None Include="..\..\readme.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\CUDATest\Source\Tasks\TaskAddValuesCPU.h" />
-    <ClInclude Include="..\..\CUDATest\Source\Tasks\TaskAddValuesGPU.cuh" />
-    <ClInclude Include="..\..\CUDATest\Source\Utility\Helpers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
